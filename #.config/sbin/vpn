@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo -e "\n${greenColour}[*] Connecting to HTB${endColour}\n"
+sleep 2 &
+openvpn /home/za0s//Desktop/za0s/HTB/$1* > /dev/null  &
+echo -e "\n${yellowColour}[*] Successfully connected :) ${endColour}\n"

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+process=$(ps aux | grep openvpn | awk '{print $2}' | xargs | awk '{print $1}')
+sleep 2
+kill $process >/dev/null
+
+if [ $? = 0 ]
+then
+  echo -e "\n${greenColour}[*] Successfullly Killed HTB Vpn :) ${endColour}\n"
+else
+  echo -e "\n${redColour}[*] There's no Vpn to kill :( ${endColour}\n"
+fi 
+
+
+
